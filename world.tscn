@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2aos33pin5pw"]
+
+[ext_resource type="PackedScene" uid="uid://b8obxjrpnylx3" path="res://ground.tscn" id="1_8pgbn"]
+[ext_resource type="PackedScene" uid="uid://6y3sp3gon1c1" path="res://player.tscn" id="2_qpgfj"]
+[ext_resource type="PackedScene" uid="uid://bfc8t6gn67w56" path="res://obstacle.tscn" id="3_hekhj"]
+[ext_resource type="PackedScene" uid="uid://d25yse3hnkyxq" path="res://hud.tscn" id="4_l11xs"]
+[ext_resource type="PackedScene" uid="uid://5bnxuvswl51n" path="res://stress_test.tscn" id="5_4p6rq"]
+[ext_resource type="PackedScene" uid="uid://blemnu5c6mxbh" path="res://destress.tscn" id="6_6lwgr"]
+[ext_resource type="PackedScene" uid="uid://ssq5ccwhq65e" path="res://wolf_enemy.tscn" id="7_gbnn7"]
+
+[node name="World" type="Node3D"]
+
+[node name="Ground" parent="." instance=ExtResource("1_8pgbn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_qpgfj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.37788, 0)
+
+[node name="Ground2" parent="." instance=ExtResource("3_hekhj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.54085, 0.393333, -3.37497)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.937731, -0.127432, 0.323142, 0, 0.930277, 0.366858, -0.347361, -0.344015, 0.87235, 18.9713, 8.23448, 0)
+light_color = Color(0.0784314, 0.662745, 0, 1)
+shadow_enabled = true
+
+[node name="Obstacle" parent="." instance=ExtResource("3_hekhj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.05725, 0.270027, -4.27807)
+
+[node name="Obstacle2" parent="." instance=ExtResource("3_hekhj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.290144, 3.97333)
+
+[node name="Obstacle3" parent="." instance=ExtResource("3_hekhj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.96473, 1.09532, -3.91683)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("4_l11xs")]
+
+[node name="Stress_test" parent="." instance=ExtResource("5_4p6rq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.15165, 0.335312, 4.75952)
+
+[node name="Destress" parent="." instance=ExtResource("6_6lwgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 2)
+
+[node name="Destress2" parent="." instance=ExtResource("6_6lwgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55228, 2.7498, -3.6571)
+
+[node name="Wolf_Enemy" parent="." instance=ExtResource("7_gbnn7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4973, 2.09688, 20.612)

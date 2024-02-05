@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://d25yse3hnkyxq"]
+
+[ext_resource type="Script" path="res://hud.gd" id="1_cifo8"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cifo8")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 18.0
+offset_right = 56.0
+offset_bottom = 41.0
+text = "Stress"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 605.0
+offset_right = 133.0
+offset_bottom = 628.0
+text = "arbitrary label"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 19.0
+offset_right = 1135.0
+offset_bottom = 42.0
+text = "arbitrary label"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1017.0
+offset_top = 599.0
+offset_right = 1128.0
+offset_bottom = 622.0
+text = "arbitrary label"
+
+[node name="Stress_Bar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 20.0
+offset_right = 387.0
+offset_bottom = 47.0

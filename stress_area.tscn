@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c01u8pkx32thi"]
+
+[ext_resource type="Script" path="res://stress_area.gd" id="1_y6ru2"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_b8qpg"]
+radius = 6.24611
+
+[node name="Stress_Area" type="Area3D"]
+script = ExtResource("1_y6ru2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_b8qpg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
